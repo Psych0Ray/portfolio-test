@@ -35,7 +35,14 @@ Last updated: 2026-09-05
 13. **Iteration 04 revised** after further feedback: nav reworked for a student portfolio (home icon slot marked as a placeholder for a custom icon TBD, links now WORK / ABOUT / RESUME); work cards changed from square to tall portrait (418x560) matching the user's sketch — mono category top-left, year top-right, big display name bottom-left, bordered tag chips, arrow bottom-right; full card hover state specced.
 14. **Iteration 05 · Terminal** — dark `#0B0B0D`, mono-forward (JetBrains Mono for headlines too), square 2px radius, hairline grid rules, bracket nav notation (`WORK[1]`), blinking caret block in the hero, bracketed `[UI DESIGN]` tags. Technical/dev-student energy.
 15. **Iteration 06 · Riso Press** — warm print paper `#F6F3E9`, near-black `#0A0A0A`, Archivo Black display, 2.5px borders and hard offset shadows (radius 0) throughout, pill tag chips, red highlight box around "REMEMBER". Neo-brutalist print-poster energy.
-16. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
+16. **Iteration 06 chosen as the direction.** Built out as a full multi-page site in Figma (section `Iteration 06 · Riso Press`):
+    - **Home page** — hero, selected work grid, studio, contact, footer. Nav `WORK` is the active item because Selected Works is an anchor to the work section on Home, not its own page.
+    - **About page** — header with portrait cutout, Skills chip cloud, Software 4x2 tile grid, Experience blocks (Accenture internship featured in red), Education, intern-focused contact CTA.
+    - **Resume page** — header with contact chips and a Download PDF CTA, two-column body (Experience / Education / Selected Projects on the left; Skills / Software with proficiency / Languages on the right).
+    - **Cursor & Hover States** frame updated to the new card.
+    - **Card redesign per user feedback:** single non-red default (white `#FFFFFF`), no shadow at rest, with a bordered **thumbnail cutout** filling the middle as the project image slot. On hover the card fills red and a 10px hard shadow drops in. Bottom meta block is height-locked at 124px so every thumbnail is identical (385px).
+    - **Clipping fixed:** audited every drop-shadowed node against its clipping ancestors, found 2 real clips (hero red "REMEMBER" box, contact CTA), set `clipsContent = false` on 121 auto-layout containers while preserving intentional clippers (thumbnails, portrait, home icon, page frames, full-bleed contact). Re-audit returns 0 issues.
+17. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
 
 ## In progress / not yet confirmed
 
@@ -43,7 +50,9 @@ Last updated: 2026-09-05
 
 ## Next up (not started)
 
-- **Awaiting user's verdict on Iteration 04** (the feedback-driven direction). Iterations 01-03 remain on the page for reference.
+- **Project Detail page is the one page still missing** — work cards on Home currently have nowhere to route. Flagged to the user, not yet built.
+- Iteration 06 is the chosen direction; iterations 01-05 remain on the page for reference only.
+- Once pages are signed off, build the real site in HTML/CSS/JS (GSAP already wired into the repo).
 - Work tiles are placeholders, not real imagery — the Figma plugin API blocks `createImageAsync`, so real project images must be dropped in manually. In Iteration 04 the tiles are flat colour posters with the project name set inside, so they read as intentional even before real images land.
 - Custom home icon still to be designed — every iteration has a placeholder icon slot in the nav, layer-named so it is easy to find.
 - User's stated dislikes to respect going forward: **gradients** (audited: 0 gradient fills across iterations 04-06). User's stated likes: Bricolage Grotesque for display, uppercase mono nav labels, the pill nav shape, normal (non-bento) work grids, tall portrait work cards with tag chips, Awwwards-style playful detail.
