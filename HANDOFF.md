@@ -50,7 +50,13 @@ Last updated: 2026-09-05
 
 ## Next up (not started)
 
-- **Project Detail page is the one page still missing** — work cards on Home currently have nowhere to route. Flagged to the user, not yet built.
+- **Project Detail page is the one page still missing** — work cards on Home currently have nowhere to route. Template designed on paper but **not built yet; user chose to hold off on 2026-09-06.**
+
+  **Agreed direction when it does get built:** own on-site project page, NOT an outbound Behance link (keeps the hirer on the site, preserves the design language, keeps the contact CTA in reach; Behance stays as a feeder that links back).
+
+  **Important:** do NOT embed the PDF. Export each PDF page to an image and stack them full-width so the page scrolls naturally, and offer the original PDF as a "Download PDF" button alongside. Reasons: mobile browsers (iOS Safari especially) often refuse to render inline PDFs and show a blank box or force a download; embeds create nested scrolling; decks run 10-20MB which kills mobile load; PDF text is not selectable, indexable, or accessible inside an embed.
+
+  **Page structure agreed:** (1) intro block — project name, one-line description, role / timeline / tools as chips reusing the existing tag component; (2) stacked slide images + Download PDF button; (3) one closing line on outcome or what they would change; (4) next-project card + contact CTA. User has PDFs ready for all 6 case studies.
 - Iteration 06 is the chosen direction; iterations 01-05 remain on the page for reference only.
 - Once pages are signed off, build the real site in HTML/CSS/JS (GSAP already wired into the repo).
 - Work tiles are placeholders, not real imagery — the Figma plugin API blocks `createImageAsync`, so real project images must be dropped in manually. In Iteration 04 the tiles are flat colour posters with the project name set inside, so they read as intentional even before real images land.
