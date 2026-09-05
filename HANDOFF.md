@@ -32,7 +32,10 @@ Last updated: 2026-09-05
     - **Iteration 02 · Editorial** — cool paper `#EFEFED`, deep red `#C8102E`, Bricolage Grotesque + Geist. Typographic manifesto hero with filmstrip preview; staggered two-column work grid; full-bleed red contact block.
     - **Iteration 03 · Chroma** — `#08070A` with luminous `#FF3B2F`, Schibsted Grotesk + JetBrains Mono. Full-bleed chroma hero with floating glass nav + glass hero card; wave-offset three-column grid, glass caption on every tile.
 12. **Iteration 04 · Signal** — built after user feedback on 01-03. Feedback was: no gradients; Bricolage Grotesque is good (especially heroes); keep Iteration 03's pill nav shape but swap its font to uppercase mono (refs: OkayDev nav + a pixel-mono nav); hero was "mid", make it poppier with Awwwards-style play; drop the bento grid for a normal grid. Result: paper `#F3F2EE` / ink `#111112` / signal red `#FF3B21`, entirely flat fills (verified 0 gradient fills in the frame). Bricolage ExtraBold hero at 104px with "REMEMBER" in red, JetBrains Mono uppercase pill nav, rotated "OPEN FOR Q1 2026" sticker badge, flat red panel, normal 3x2 poster-tile work grid, one marquee band, flat red contact block.
-13. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
+13. **Iteration 04 revised** after further feedback: nav reworked for a student portfolio (home icon slot marked as a placeholder for a custom icon TBD, links now WORK / ABOUT / RESUME); work cards changed from square to tall portrait (418x560) matching the user's sketch — mono category top-left, year top-right, big display name bottom-left, bordered tag chips, arrow bottom-right; full card hover state specced.
+14. **Iteration 05 · Terminal** — dark `#0B0B0D`, mono-forward (JetBrains Mono for headlines too), square 2px radius, hairline grid rules, bracket nav notation (`WORK[1]`), blinking caret block in the hero, bracketed `[UI DESIGN]` tags. Technical/dev-student energy.
+15. **Iteration 06 · Riso Press** — warm print paper `#F6F3E9`, near-black `#0A0A0A`, Archivo Black display, 2.5px borders and hard offset shadows (radius 0) throughout, pill tag chips, red highlight box around "REMEMBER". Neo-brutalist print-poster energy.
+16. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
 
 ## In progress / not yet confirmed
 
@@ -42,7 +45,9 @@ Last updated: 2026-09-05
 
 - **Awaiting user's verdict on Iteration 04** (the feedback-driven direction). Iterations 01-03 remain on the page for reference.
 - Work tiles are placeholders, not real imagery — the Figma plugin API blocks `createImageAsync`, so real project images must be dropped in manually. In Iteration 04 the tiles are flat colour posters with the project name set inside, so they read as intentional even before real images land.
-- User's stated dislikes to respect going forward: **gradients**. User's stated likes: Bricolage Grotesque for display, uppercase mono nav labels, normal (non-bento) work grids, Awwwards-style playful detail.
+- Custom home icon still to be designed — every iteration has a placeholder icon slot in the nav, layer-named so it is easy to find.
+- User's stated dislikes to respect going forward: **gradients** (audited: 0 gradient fills across iterations 04-06). User's stated likes: Bricolage Grotesque for display, uppercase mono nav labels, the pill nav shape, normal (non-bento) work grids, tall portrait work cards with tag chips, Awwwards-style playful detail.
+- Context: this is a **student** portfolio. Nav is WORK / ABOUT / RESUME with a home icon; copy refers to the user as a design student.
 - Replace all placeholder content (name is set; tagline, About text, Projects, Contact still placeholders).
 - Add a favicon (currently 404s, caught by the Playwright tooling — cosmetic only).
 - Write the actual GSAP animations once a design direction is chosen.
