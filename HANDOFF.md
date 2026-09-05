@@ -31,7 +31,8 @@ Last updated: 2026-09-05
     - **Iteration 01 · Vault** — near-black `#0A0A0B`, vermilion `#E8402A`, Geist + Geist Mono. Asymmetric split hero with frosted-glass caption; bento work grid (rows of 2 / 3 / 1).
     - **Iteration 02 · Editorial** — cool paper `#EFEFED`, deep red `#C8102E`, Bricolage Grotesque + Geist. Typographic manifesto hero with filmstrip preview; staggered two-column work grid; full-bleed red contact block.
     - **Iteration 03 · Chroma** — `#08070A` with luminous `#FF3B2F`, Schibsted Grotesk + JetBrains Mono. Full-bleed chroma hero with floating glass nav + glass hero card; wave-offset three-column grid, glass caption on every tile.
-12. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
+12. **Iteration 04 · Signal** — built after user feedback on 01-03. Feedback was: no gradients; Bricolage Grotesque is good (especially heroes); keep Iteration 03's pill nav shape but swap its font to uppercase mono (refs: OkayDev nav + a pixel-mono nav); hero was "mid", make it poppier with Awwwards-style play; drop the bento grid for a normal grid. Result: paper `#F3F2EE` / ink `#111112` / signal red `#FF3B21`, entirely flat fills (verified 0 gradient fills in the frame). Bricolage ExtraBold hero at 104px with "REMEMBER" in red, JetBrains Mono uppercase pill nav, rotated "OPEN FOR Q1 2026" sticker badge, flat red panel, normal 3x2 poster-tile work grid, one marquee band, flat red contact block.
+13. Looked at (but did not install — it's not a plugin) `voltagent/awesome-design-md`: a reference library of ~100+ brand `DESIGN.md` style-guide files. Usage model: user picks a brand, we fetch that one file, I use it as a style spec. No action taken yet — waiting on user to pick a brand if they want this route for a future redesign.
 
 ## In progress / not yet confirmed
 
@@ -39,8 +40,9 @@ Last updated: 2026-09-05
 
 ## Next up (not started)
 
-- **Awaiting user's pick of one of the 3 Figma iterations** (or a hybrid) before building the real site.
-- Work tiles in all 3 Figma iterations use gradient placeholders, not real imagery — the Figma plugin API blocks `createImageAsync`, so real project images must be dropped in manually or the direction rebuilt with generated assets.
+- **Awaiting user's verdict on Iteration 04** (the feedback-driven direction). Iterations 01-03 remain on the page for reference.
+- Work tiles are placeholders, not real imagery — the Figma plugin API blocks `createImageAsync`, so real project images must be dropped in manually. In Iteration 04 the tiles are flat colour posters with the project name set inside, so they read as intentional even before real images land.
+- User's stated dislikes to respect going forward: **gradients**. User's stated likes: Bricolage Grotesque for display, uppercase mono nav labels, normal (non-bento) work grids, Awwwards-style playful detail.
 - Replace all placeholder content (name is set; tagline, About text, Projects, Contact still placeholders).
 - Add a favicon (currently 404s, caught by the Playwright tooling — cosmetic only).
 - Write the actual GSAP animations once a design direction is chosen.
